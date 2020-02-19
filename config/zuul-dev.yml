@@ -16,7 +16,7 @@ zuul:
     user-service: /user-service/**
     order-service: /order-service/**
   
-  retryable: false  #默认false,zuul不推荐使用重试
+  retryable: true  #默认false,zuul不推荐使用重试
   
 ribbon:
   ConnectTimeout: 1000
@@ -30,7 +30,7 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 500
+            timeoutInMilliseconds: 1000
   
   
 management:
