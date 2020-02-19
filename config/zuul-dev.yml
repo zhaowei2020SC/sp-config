@@ -15,6 +15,7 @@ zuul:
     item-service: /item-service/**
     user-service: /user-service/**
     order-service: /order-service/**
+  
   retryable: true  #默认false,zuul不推荐使用重试
   
 ribbon:
@@ -30,6 +31,7 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 500
+  
   
 management:
   endpoints:
